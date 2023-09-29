@@ -20,3 +20,4 @@ jobs:
         with:
           start: yarn dev
           install-command: yarn install --frozen-lockfile
+          working-directory: ./playground
