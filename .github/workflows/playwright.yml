@@ -25,12 +25,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: playground-playwright-report
-          path: ./playground/playwright-report/
-          retention-days: 30
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
+          # artifactはworking-directory無視されるっぽい？
           name: playwright-report
-          path: ./playwright-report
+          path: ./playground/playwright-report/
           retention-days: 30
