@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Button } from "./components/button"
 
 export default function Home() {
+
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -17,6 +18,15 @@ export default function Home() {
   }
   return (
     <main>
+      <img
+        src="https://example.com/hero.jpg"
+        alt="Landscape picture"
+        width={800}
+        height={500}
+      />
+      <div>
+        <a href="/about">About Us</a>
+      </div>
       <h1>Login Form</h1>
       {/*ユーザーIDとパスワードを含んだログインフォーム */}
       {isLoggedIn && <p>Logged in as {username}!!</p>}
